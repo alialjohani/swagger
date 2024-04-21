@@ -1,0 +1,447 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Dashboard",
+        "description": "# ⛓️ Get started here\n\nThis is a demo swagger generated based on Postman collection environtment using NodeJS as auto scripting.\n\nIn this demo dashboard, there are two endpoints that both using GET.\n\nFor simplicity, there are no authentication or header token requirements.",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://dashboard.alialjohani.com"
+        }
+    ],
+    "paths": {
+        "/company/survey/query/": {
+            "get": {
+                "tags": [
+                    "General"
+                ],
+                "summary": "GetAllData",
+                "description": "This endpoint to get all data based on 'startdatetime', 'enddatetime', and 'agents'.\n\nDatetime must be in same format as shown example.\n\nFor agents. either request by agent's name or by '\\*' for all agents.",
+                "parameters": [
+                    {
+                        "name": "startdatetime",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "01/05/2023 20:00 "
+                    },
+                    {
+                        "name": "enddatetime",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": " 31/05/2023 04:00"
+                    },
+                    {
+                        "name": "agents",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "*"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "Server": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "nginx/1.18.0 (Ubuntu)"
+                                }
+                            },
+                            "Date": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "Sun, 21 Apr 2024 02:43:18 GMT"
+                                }
+                            },
+                            "Content-Type": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "application/json; charset=utf-8"
+                                }
+                            },
+                            "Content-Length": {
+                                "schema": {
+                                    "type": "integer",
+                                    "example": "3465"
+                                }
+                            },
+                            "Connection": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "keep-alive"
+                                }
+                            },
+                            "X-Powered-By": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "Express"
+                                }
+                            },
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "*"
+                                }
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+                                }
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "X-Requested-With,content-type"
+                                }
+                            },
+                            "Access-Control-Allow-Credentials": {
+                                "schema": {
+                                    "type": "boolean",
+                                    "example": "true"
+                                }
+                            },
+                            "ETag": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "W/\"d89-e+M7xyFj6MO2cj2R4thHrKEk+Yw\""
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "example": {
+                                    "success": [
+                                        {
+                                            "surveyId": 1,
+                                            "surveyCallerId": "070000001",
+                                            "conversationLink": "http://www.example.com/1",
+                                            "ServiceSatisfaction": "5",
+                                            "AgentSatisfaction": "4",
+                                            "agentName": "AgentB",
+                                            "createdDate": "2023-05-02T01:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 2,
+                                            "surveyCallerId": "070000002",
+                                            "conversationLink": "http://www.example.com/2",
+                                            "ServiceSatisfaction": "2",
+                                            "AgentSatisfaction": "2",
+                                            "agentName": "AgentC",
+                                            "createdDate": "2023-05-03T02:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 3,
+                                            "surveyCallerId": "070000003",
+                                            "conversationLink": "http://www.example.com/3",
+                                            "ServiceSatisfaction": "5",
+                                            "AgentSatisfaction": "2",
+                                            "agentName": "AgentA",
+                                            "createdDate": "2023-05-04T03:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 6,
+                                            "surveyCallerId": "070000006",
+                                            "conversationLink": "http://www.example.com/6",
+                                            "ServiceSatisfaction": "5",
+                                            "AgentSatisfaction": "5",
+                                            "agentName": "AgentA",
+                                            "createdDate": "2023-05-02T06:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 8,
+                                            "surveyCallerId": "070000008",
+                                            "conversationLink": "http://www.example.com/8",
+                                            "ServiceSatisfaction": "5",
+                                            "AgentSatisfaction": "3",
+                                            "agentName": "AgentC",
+                                            "createdDate": "2023-05-04T08:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 9,
+                                            "surveyCallerId": "070000009",
+                                            "conversationLink": "http://www.example.com/9",
+                                            "ServiceSatisfaction": "4",
+                                            "AgentSatisfaction": "3",
+                                            "agentName": "AgentA",
+                                            "createdDate": "2023-05-05T09:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 11,
+                                            "surveyCallerId": "070000011",
+                                            "conversationLink": "http://www.example.com/11",
+                                            "ServiceSatisfaction": "3",
+                                            "AgentSatisfaction": "5",
+                                            "agentName": "AgentC",
+                                            "createdDate": "2023-05-02T11:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 12,
+                                            "surveyCallerId": "070000012",
+                                            "conversationLink": "http://www.example.com/12",
+                                            "ServiceSatisfaction": "4",
+                                            "AgentSatisfaction": "3",
+                                            "agentName": "AgentA",
+                                            "createdDate": "2023-05-03T12:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 13,
+                                            "surveyCallerId": "070000013",
+                                            "conversationLink": "http://www.example.com/13",
+                                            "ServiceSatisfaction": "4",
+                                            "AgentSatisfaction": "2",
+                                            "agentName": "AgentB",
+                                            "createdDate": "2023-05-04T13:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 17,
+                                            "surveyCallerId": "070000017",
+                                            "conversationLink": "http://www.example.com/17",
+                                            "ServiceSatisfaction": "4",
+                                            "AgentSatisfaction": "1",
+                                            "agentName": "AgentC",
+                                            "createdDate": "2023-05-03T17:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 18,
+                                            "surveyCallerId": "070000018",
+                                            "conversationLink": "http://www.example.com/18",
+                                            "ServiceSatisfaction": "1",
+                                            "AgentSatisfaction": "3",
+                                            "agentName": "AgentA",
+                                            "createdDate": "2023-05-04T18:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 19,
+                                            "surveyCallerId": "070000019",
+                                            "conversationLink": "http://www.example.com/19",
+                                            "ServiceSatisfaction": "4",
+                                            "AgentSatisfaction": "5",
+                                            "agentName": "AgentB",
+                                            "createdDate": "2023-05-05T19:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 20,
+                                            "surveyCallerId": "070000020",
+                                            "conversationLink": "http://www.example.com/20",
+                                            "ServiceSatisfaction": "2",
+                                            "AgentSatisfaction": "5",
+                                            "agentName": "AgentC",
+                                            "createdDate": "2023-05-01T20:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 7,
+                                            "surveyCallerId": "070000007",
+                                            "conversationLink": "http://www.example.com/7",
+                                            "ServiceSatisfaction": "5",
+                                            "AgentSatisfaction": "2",
+                                            "agentName": "AgentB",
+                                            "createdDate": "2023-05-03T07:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 14,
+                                            "surveyCallerId": "070000014",
+                                            "conversationLink": "http://www.example.com/14",
+                                            "ServiceSatisfaction": "5",
+                                            "AgentSatisfaction": "5",
+                                            "agentName": "AgentC",
+                                            "createdDate": "2023-05-05T14:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 16,
+                                            "surveyCallerId": "070000016",
+                                            "conversationLink": "http://www.example.com/16",
+                                            "ServiceSatisfaction": "5",
+                                            "AgentSatisfaction": "3",
+                                            "agentName": "AgentB",
+                                            "createdDate": "2023-05-02T16:00:00.000Z"
+                                        },
+                                        {
+                                            "surveyId": 4,
+                                            "surveyCallerId": "070000004",
+                                            "conversationLink": "http://www.example.com/4",
+                                            "ServiceSatisfaction": "5",
+                                            "AgentSatisfaction": "5",
+                                            "agentName": "AgentB",
+                                            "createdDate": "2023-05-05T04:00:00.000Z"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/company/survey/click_query/": {
+            "get": {
+                "tags": [
+                    "General"
+                ],
+                "summary": "Deep query",
+                "description": "This endpoint has more parameters to query with backend.\n\nBeside the regular parameters that are datetime and agents, you can specifiy a 'primary' key and its 'primaryvalue' as a value. Also, it supports 'secondary' parameter as a key with its 'secondaryvalue' as its value. By these, you can have more control to query.\n\nFor example, the URL here has",
+                "parameters": [
+                    {
+                        "name": "primary",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "timeOnly"
+                    },
+                    {
+                        "name": "primaryvalue",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": "14"
+                    },
+                    {
+                        "name": "secondry",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "ServiceSatisfaction"
+                    },
+                    {
+                        "name": "secondryvalue",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": "5"
+                    },
+                    {
+                        "name": "startdatetime",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "01/05/2023 20:00 "
+                    },
+                    {
+                        "name": "enddatetime",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": " 31/05/2023 04:00"
+                    },
+                    {
+                        "name": "agents",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "*"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "Server": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "nginx/1.18.0 (Ubuntu)"
+                                }
+                            },
+                            "Date": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "Sun, 21 Apr 2024 02:30:17 GMT"
+                                }
+                            },
+                            "Content-Type": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "application/json; charset=utf-8"
+                                }
+                            },
+                            "Content-Length": {
+                                "schema": {
+                                    "type": "integer",
+                                    "example": "217"
+                                }
+                            },
+                            "Connection": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "keep-alive"
+                                }
+                            },
+                            "X-Powered-By": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "Express"
+                                }
+                            },
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "*"
+                                }
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+                                }
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "X-Requested-With,content-type"
+                                }
+                            },
+                            "Access-Control-Allow-Credentials": {
+                                "schema": {
+                                    "type": "boolean",
+                                    "example": "true"
+                                }
+                            },
+                            "ETag": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "W/\"d9-uJRL6voWQJgDp1c8WaboVycp0K4\""
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "example": {
+                                    "success": [
+                                        {
+                                            "surveyId": 14,
+                                            "surveyCallerId": "070000014",
+                                            "conversationLink": "http://www.example.com/14",
+                                            "ServiceSatisfaction": "5",
+                                            "AgentSatisfaction": "5",
+                                            "agentName": "AgentC",
+                                            "createdDate": "2023-05-05T14:00:00.000Z"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

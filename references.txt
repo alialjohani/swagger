@@ -1,0 +1,18 @@
+// https://www.npmjs.com/package/swagger-ui-express
+// https://swagger.io/docs/specification/basic-structure/
+// https://onlineyamltools.com/convert-yaml-to-json
+//  HOW to auto generate Swagger json:
+//https://swagger.io/docs/swagger-inspector/how-to-create-an-openapi-definition-using-swagger/
+// Postman to Swagger
+// https://www.postman.com/postman/workspace/postman-open-technologies-convert-postman-collections-into-openapi/overview
+// https://joolfe.github.io/postman-to-openapi/
+// https://joolfe.github.io/postman-to-openapi/#outputformat-string
+// Auto export postman collection:
+//https://stackoverflow.com/questions/44148738/is-there-a-programmatic-way-to-export-postman-collections
+// https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a#647806d5-492a-eded-1df6-6529b5dc685c
+
+// nodejs fs writefile promise
+https://www.geeksforgeeks.org/node-js-fspromises-writefile-method/
+// nodejs fs copy file promise
+https://www.geeksforgeeks.org/node-js-fspromises-copyfile-method/
+
